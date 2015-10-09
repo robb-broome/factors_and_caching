@@ -1,0 +1,11 @@
+## Environment normalisation:
+/.bundle/
+/lib/bundler/man/
+
+*.swp
+*.swo
+*.swn
+*~
+
+.DS_Store
+factor_store.yml

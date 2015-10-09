@@ -1,20 +1,29 @@
 class Factor
 
-  attr_reader :sample
+  attr_reader :test_set, :cache
 
-  def initialize test_set
-    @sample = test_set
+  def initialize test_set, cache_disabled: false
+    @cache = Cache.new test_set, disabled: cache_disabled
+    @test_set = test_set
   end
 
   def factor_list
-    {}.tap do |ans|
-      sample.each do |i|
-        ans[i] =  factors_of(i, sample)
-      end
-    end
+    cache.read(action) || cache.write(action, factor)
   end
 
   private
+
+  def action
+    self.class.name
+  end
+
+  def factor
+    {}.tap do |ans|
+      test_set.each do |i|
+        ans[i] =  factors_of(i, test_set)
+      end
+    end
+  end
 
   def factors_of i, list
       (list - [i]).map do |test|
