@@ -1,0 +1,38 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ansi (1.5.0)
+    builder (3.2.2)
+    coderay (1.1.0)
+    dotenv (2.0.2)
+    method_source (0.8.2)
+    minitest (5.8.1)
+    minitest-reporters (1.1.2)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    pry (0.10.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rake (10.4.2)
+    rspec-core (3.3.2)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
+    ruby-progressbar (1.7.5)
+    slop (3.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  minitest
+  minitest-reporters
+  pry
+  rake
+  rspec-core
+
+BUNDLED WITH
+   1.10.6
