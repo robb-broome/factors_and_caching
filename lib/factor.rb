@@ -26,8 +26,8 @@ class Factor
   end
 
   def factors_of i, list
-      (list - [i]).map do |test|
-        test if (i % test == 0)
-      end.compact
+    (list - [i]).map do |test|
+      test if (i % test == 0)
+    end.compact
   end
 end
